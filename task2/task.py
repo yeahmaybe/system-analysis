@@ -20,7 +20,13 @@ def task(edges_csv: str):
         matrix[inf][3] += matrix[sup][1]
         matrix[inf][4] += matrix[sup][0] - 1
 
-    return matrix
+    result = ""
+    for row in matrix:
+        for col in row:
+            result+= str(col)+","
+        result = result[:-1]+"\n"
+
+    return result[:-1]
 
 # 1
 #  \
@@ -30,4 +36,5 @@ def task(edges_csv: str):
 #  |  \
 #  4    5
 
-print(task("1,2\n2,3\n2,6\n3,4\n3,5"))
+if __name__ == "__main__":
+    print(task("1,2\n2,3\n2,6\n3,4\n3,5"))
