@@ -62,7 +62,7 @@ def task():
     HAB = get_HAB(matrix)
     HaB = HAB - Ha
     Iab = Hb - HaB
-    return " Ha: {0}\n Hb: {1}\n HaB: {2}\n HAB: {3}\n Iab: {4}".format(Ha, Hb, HaB, HAB, Iab)
+    return  HAB, Ha, Hb, HaB, Iab
 
 
 if __name__ == "__main__":
