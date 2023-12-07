@@ -94,7 +94,7 @@ def get_clusters(matrix, est1, est2):
         if not result:
             result.append(clusters[k])
             continue
-        # если сумма единичек меньше значит справа стоит меньше значит объект левее
+        # если сумма единичек меньше, а справа стоит объект с меньшей, значит объект левее
         for i, elem in enumerate(result):
             # если объекты неразличимы в обоих оценках, то добавляяем в кластер вершины
             if np.sum(est1[elem[0] - 1]) == np.sum(est1[k - 1]) and np.sum(est2[elem[0] - 1]) == np.sum(est2[k - 1]):
